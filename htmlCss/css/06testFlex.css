@@ -1,0 +1,22 @@
+
+.container {
+  display: flex;
+  flex-direction: row;
+  /* justification sur l'axe principal */
+  justify-content: space-between;
+  border: 1px solid black;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  height: 100vh;
+  align-content: space-around;
+}
+.container > * {
+  border: 1px solid green;
+  flex-basis: 23%;
+  margin: 20px 0;
+}
+/* Selection du 4ième élément */
+.container > div:nth-child(4){
+  align-self: flex-start;
+  order: 1;
+}

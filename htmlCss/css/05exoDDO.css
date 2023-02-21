@@ -1,0 +1,91 @@
+
+
+body:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.show {
+  width: 100%;
+  position: relative;
+  margin: 0;
+}
+
+.show > img {
+  border-radius: 8px;
+  /* L'image prendra au maximum la taille de son parent direct */
+  max-width: 100%;
+}
+p.season {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+h2 {
+  position: absolute;
+  top: 45%;
+  left: 10px;
+  color: white;
+}
+.p-details{
+  position: absolute;
+  top: 55%;
+  left: 10px;
+  color: white;
+}
+.btn-details {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.btn-book {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* Si l'écran est celui d'une tablette, je veux 2 colonnes */
+
+@media screen and (min-width:500px) {
+  .container {
+    width: 100%;
+  }
+  .show {
+    width: 48% !important;
+    float: left;
+    position: relative;
+    margin: 20px 1%;
+    box-sizing: border-box;/* permet d'enlever la marge et le border du calcul du width */
+  }
+}
+/* Si l'écran est celui d'une pc portable bas de gamme, je veux 3 colonnes */
+@media screen and (min-width:1060px) {
+  .container {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .show {
+    width: 30% !important;
+    float: left;
+    position: relative;
+    margin: 20px 1%;
+    box-sizing: border-box;/* permet d'enlever la marge et le border du calcul du width */
+  }
+}
+/* Si l'écran a une bonne résolution, je veux 4 colonnes */
+@media screen and (min-width:1600px) {
+  .container {
+    width: 1520px;
+    margin: 0 auto;
+  }
+  .show {
+    width: 23% !important;
+    float: left;
+    position: relative;
+    margin: 20px 1%;
+    box-sizing: border-box;/* permet d'enlever la marge et le border du calcul du width */
+  }
+}

@@ -1,0 +1,54 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5em;
+}
+
+.float-left {
+  float: left;
+  /* haut, droite, bas, gauche */
+  margin: 0 20px 50px 20px;
+  border: 5px solid red;
+}
+/* l'élement n'accepte pas d'élément flottant à gauche ou à droite */
+/* .clear {
+  clear: both;
+} */
+
+section {
+  border: 1px solid red;
+}
+/* Ajoute un élément html comme dernier enfant de l'élément qui a pour classe clear-fix et cet élément passe sous les éléments flottants grace à l'utilisation de la propriété clear */
+.clear-fix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* Le nombre qui est stocké dans le paramètre de nth-child n'est pris en compte que s'il est strictement positif */
+#test p:nth-child(-n + 2) {
+  display: inline;
+  border: 1px solid blue;
+  background-color: #ffff00cc;
+}
+#test {
+  padding: 10px;
+  position: relative;
+  border: 3px solid red;
+  width: 50%;/* 50% de son conteneur */
+  box-sizing: content-box;
+}
+#mike {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline;
+}
+
+
