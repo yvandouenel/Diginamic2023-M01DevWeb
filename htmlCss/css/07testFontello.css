@@ -1,0 +1,12 @@
+[class^="icon"]{
+  color: blue;
+}
+#my-glass:before {
+  font-size: 3rem;
+}
+.video:before {
+  content: "\e80b";
+  font-size: 2rem;
+}
+#my-video:before {
+}
