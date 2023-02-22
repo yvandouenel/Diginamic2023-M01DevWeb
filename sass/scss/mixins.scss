@@ -6,6 +6,7 @@
   white-space: nowrap;
   width: 1px;
   z-index: -1000;
+  
 }
 /* Mixion avec paramètres et valeurs par défaut */
 @mixin buttonLike($bgcolor: $black, $fgcolor: white, $bordercolor: black) {
@@ -14,4 +15,10 @@
   background-color: $bgcolor;
   color: $fgcolor;
   text-decoration: none;
+  padding: 10px;
+  border-radius: 6px;
+  &:hover {
+    /* background-color: lighten($bgcolor, 10%); */
+    background-color: darken($bgcolor, 10%);
+  }
 }

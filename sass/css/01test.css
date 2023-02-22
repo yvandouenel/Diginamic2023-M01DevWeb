@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* Mixion avec paramètres et valeurs par défaut */
 body {
-  background-color: #121b1b;
+  background-color: #EFEFEF;
 }
 
 p a {
@@ -12,6 +12,12 @@ p a {
   background-color: #121b1b;
   color: white;
   text-decoration: none;
+  padding: 10px;
+  border-radius: 6px;
+}
+p a:hover {
+  /* background-color: lighten($bgcolor, 10%); */
+  background-color: black;
 }
 
 div.sr-only {
