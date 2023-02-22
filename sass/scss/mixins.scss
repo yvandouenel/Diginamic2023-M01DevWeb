@@ -1,0 +1,17 @@
+@mixin hideSR {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  z-index: -1000;
+}
+/* Mixion avec paramètres et valeurs par défaut */
+@mixin buttonLike($bgcolor: $black, $fgcolor: white, $bordercolor: black) {
+  display: inline-block;
+  border: 1px solid $bordercolor;
+  background-color: $bgcolor;
+  color: $fgcolor;
+  text-decoration: none;
+}

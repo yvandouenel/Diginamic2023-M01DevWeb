@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/* Mixion avec paramètres et valeurs par défaut */
+body {
+  background-color: #121b1b;
+}
+
+p a {
+  /* Appel de la mixin */
+  /* @include buttonLike(black, white , green); */
+  display: inline-block;
+  border: 1px solid black;
+  background-color: #121b1b;
+  color: white;
+  text-decoration: none;
+}
+
+div.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  z-index: -1000;
+}
+
+/*# sourceMappingURL=01test.css.map */

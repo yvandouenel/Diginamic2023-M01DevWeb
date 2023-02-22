@@ -1,0 +1,17 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+
+body {
+  background-color: $black;
+}
+p {
+  a {
+    /* Appel de la mixin */
+    /* @include buttonLike(black, white , green); */
+    @include buttonLike();
+  }
+}
+div.sr-only {
+  @include hideSR;
+}
