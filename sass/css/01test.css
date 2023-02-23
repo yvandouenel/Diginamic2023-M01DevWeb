@@ -8,9 +8,9 @@ p a {
   /* Appel de la mixin */
   /* @include buttonLike(black, white , green); */
   display: inline-block;
-  border: 1px solid black;
+  border: 1px solid #121b1b;
   background-color: #121b1b;
-  color: white;
+  color: #EFEFEF;
   text-decoration: none;
   padding: 10px;
   border-radius: 6px;

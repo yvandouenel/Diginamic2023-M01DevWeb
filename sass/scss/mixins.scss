@@ -9,7 +9,7 @@
   
 }
 /* Mixion avec paramètres et valeurs par défaut */
-@mixin buttonLike($bgcolor: $black, $fgcolor: white, $bordercolor: black) {
+@mixin buttonLike($bgcolor: $black, $fgcolor: $light, $bordercolor:  $black) {
   display: inline-block;
   border: 1px solid $bordercolor;
   background-color: $bgcolor;
