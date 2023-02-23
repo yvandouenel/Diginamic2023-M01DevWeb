@@ -1,16 +1,62 @@
+@charset "UTF-8";
 /* variables */
-:root {
-  --primary-color: #fe6a23;
+.img-male {
+  position: relative;
+  top: 0;
+  transition: top 500ms ease, box-shadow 500ms ease;
+  text-transform: uppercase;
+  border: 3px solid black;
+  padding: 10px 10px;
+  display: block;
+  margin: 0 15px;
+  color: white;
+  background-color: black;
+  text-decoration: none;
 }
-
-/* fin des variables */
+.img-male:before {
+  content: "";
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+.img-male:hover {
+  background-color: black;
+  border-color: black;
+  color: white;
+  top: -2px;
+  box-shadow: 10px 5px 5px black;
+}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
 #body-header {
   position: relative;
 }
+
 #body-header h1 {
   width: 120px;
   position: absolute;
@@ -18,6 +64,7 @@ body {
   top: 0;
   margin-left: 20px;
 }
+
 #sections-nav {
   display: flex;
   flex-direction: column;
@@ -28,36 +75,162 @@ body {
 #wrapper-top-nav {
   background: url(../images/bg-top-wwf.png) repeat-x;
 }
+
+/* Code imbriqué pour la navigation haute */
 #top-nav {
   display: flex;
   justify-content: flex-end;
   padding: 10px 0;
 }
-#top-nav a {
+#top-nav a:nth-child(1) {
+  position: relative;
+  top: 0;
+  transition: top 500ms ease, box-shadow 500ms ease;
   text-transform: uppercase;
-  border: 4px solid black;
+  border: 3px solid black;
   padding: 10px 10px;
   display: block;
   margin: 0 15px;
-  color: black;
+  color: white;
+  background-color: #fe6a23;
   text-decoration: none;
 }
-#top-nav a:nth-child(1) {
-  background-color: var(--primary-color);
-  color: white;
-  border: 0;
-  border: 4px solid transparent;
+#top-nav a:nth-child(1):before {
+  content: "\e804";
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 #top-nav a:nth-child(1):hover {
-  background-color: #ed5912;
+  background-color: #ba3d01;
+  border-color: #ba3d01;
+  color: white;
+  top: -2px;
+  box-shadow: 10px 5px 5px black;
+}
+#top-nav a:nth-child(2) {
+  position: relative;
+  top: 0;
+  transition: top 500ms ease, box-shadow 500ms ease;
+  text-transform: uppercase;
+  border: 3px solid black;
+  padding: 10px 10px;
+  display: block;
+  margin: 0 15px;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+}
+#top-nav a:nth-child(2):before {
+  content: "\f342";
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+#top-nav a:nth-child(2):hover {
+  background-color: black;
+  border-color: black;
+  color: white;
+  top: -2px;
+  box-shadow: 10px 5px 5px black;
+}
+#top-nav a:nth-child(3) {
+  position: relative;
+  top: 0;
+  transition: top 500ms ease, box-shadow 500ms ease;
+  text-transform: uppercase;
+  border: 3px solid black;
+  padding: 10px 10px;
+  display: block;
+  margin: 0 15px;
+  color: white;
+  background-color: orange;
+  text-decoration: none;
 }
 #top-nav a:nth-child(3):before {
-  font-size: 1.5rem;
+  content: "";
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+#top-nav a:nth-child(3):hover {
+  background-color: #996300;
+  border-color: #996300;
+  color: white;
+  top: -2px;
+  box-shadow: 10px 5px 5px black;
 }
 #top-nav a:nth-child(4) {
   display: none;
 }
 
+/* Navigation principale avec code imbriqué */
 #main-nav {
   display: flex;
   margin: 20px 0 0 150px;
@@ -78,7 +251,7 @@ body {
   background: url(../images/baleines.jpg) no-repeat 50% 50%;
   position: relative;
 }
-.h2-first-band {
+#first-band .h2-first-band {
   color: white;
   text-transform: uppercase;
   font-weight: 900;
@@ -186,3 +359,5 @@ body {
     left: 20px;
   }
 }
+
+/*# sourceMappingURL=08exoWWF.css.map */

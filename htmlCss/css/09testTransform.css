@@ -1,0 +1,16 @@
+#wrapper-img {
+  width: 275px;
+  height: 183px;
+  overflow: hidden;
+  border: 1px solid red;
+  box-sizing: border-box;
+  
+}
+#wrapper-img img {
+  transition: transform 2s ease;
+}
+#wrapper-img img:hover {
+  transform: scale(1.2, 1.2);
+  /* transform: translate(-50%, -50%); */
+  cursor: pointer;
+}
