@@ -1,0 +1,20 @@
+/* objets littéraux + tableaux littéraux */
+[
+  {
+    "name": "Dylan",
+    "firstname": "Bob",
+    "bikes": [
+      { "brand": "Canon", "weight": 12 },
+      { "brand": "Decathlon", "weight": 16 }
+    ],
+    "address": {
+      "city": "Mtp",
+      "zipcode": "34000",
+      "street": "12 rue de la loge"
+    }
+  },
+  {},
+  {},
+  {},
+  {}
+]
