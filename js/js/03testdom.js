@@ -3,7 +3,7 @@ let h1 = document.getElementById("h1");
 
 
 // ajoute h1 en tant que dernier enfant de body
-document.head.appendChild(h1);
+//document.body.appendChild(h1);
 
 // retire h1 de l'arborescence du dom
 //h1.remove();
@@ -31,8 +31,36 @@ button.innerText = "Bouton";
 section.appendChild(button);
 
 //console.log("class de h1 : ", h1.constructor.name);
-while (h1) {
+/* while (h1) {
   console.log("class de h1 : ", h1.constructor.name);
   // Remonte la chaîne des prototypes
   h1 = Object.getPrototypeOf(h1);
-}
+} */
+
+
+h1.align = "center";
+h1.hidden = false;
+h1.innerHTML = "<span>Ceci est un texte dans un span</span>";
+h1.style = "border: 5px solid red;"
+h1.title = "Titre avec infobulle au survol";
+
+h1.className = "toto titi";
+console.log(h1.classList);
+/* h1.animate([
+  // étapes/keyframes
+  { transform: 'translateY(0px)' },
+  { transform: 'translateY(-300px)' }
+], {
+  // temporisation
+  duration: 1000,
+  iterations: Infinity
+}) */
+console.log(h1.baseURI);
+console.log(h1.firstChild);
+console.log("nextElementSibling : ", h1.nextElementSibling);
+
+h1.addEventListener("mouseover", ()=> {
+  console.log(`Click sur h1`);
+  const first_p = document.querySelector("p");
+  first_p.style = "color:red; font-size: 1.2em;"
+})
