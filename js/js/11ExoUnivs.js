@@ -14,8 +14,20 @@ form_filter.onsubmit = (e) => {
   console.log(`value du filter : `, filter);
 
   // S'assurer que le filter n'est pas vide
+  if(filter) {
+    // Suppression de l'affichage des résultats
+    document.getElementById("universities").innerHTML = "";
+    const univs_filtered = univs.filter(univ => univ.name.includes(filter));
+    console.log(`univs_filtered : `, univs_filtered);
+    univs_filtered.forEach(univ => {
+      console.log(`univ : `, univ);
+      // Création des instances de Univ
+      new Univ(univ.name, univ.web_pages[0]);
+    });
 
-  // Suppression de l'affichage des résultats
+  }
+
+  
 
   // Filtre de univ
 
