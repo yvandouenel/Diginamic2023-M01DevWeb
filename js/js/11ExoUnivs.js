@@ -1,11 +1,36 @@
 //Gestion de l'évément submit sur le formulaire
 // récupération d'une référence vers le formulaire et assignation à la const "form"
+const form = document.querySelector("form");
 
 // Assignation de la propriété onsubmit sur le formulaire. ATTENTION à supprimer le comporterment par défaut qui recharge la page (e.preventDefault())
+form.onsubmit = async (e) => {
+  e.preventDefault();
+  // Récupération de la "value" du select
+  const country = document.querySelector("select").value;
+  try {
+    // Appel de fetch avec la bonne url (concaténation utilisant la value du select)
+    const univs = await fetch(`http://universities.hipolabs.com/search?country=${country}`)
+      .then(response => {
+        console.log(`response status : `, response.status);
+        return response.json();
+      })
+      .then(data => {
+        console.log(`data : `, data);
+        return data;
+      });
+    // si j'arrive ici, c'est que mon tableau univs a été assigné
+    console.log(`univs : `, univs);
+    
+  } catch (error) {
+    console.error(`Erreur attrapée : `, error);
+  }
 
-// Récupération de la "value" du select
 
-// Appel de fetch avec la bonne url (concaténation utilisant la value du select)
+
+}
+
+
+
 
 // Utilisation des then et des catch ou des async await
 
