@@ -19,7 +19,7 @@ form_filter.onsubmit = (e) => {
 
   // Filtre de univ
 
-  // Instanciation des Univ depuis le tableau filtrer
+  // Instanciation des Univ depuis le tableau filtré
 
 }
 
