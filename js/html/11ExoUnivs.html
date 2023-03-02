@@ -11,17 +11,23 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <script src="../js/11ExoUnivs.js" defer></script>
+    <script src="../js/11ExoUnivs.js" type="module" defer></script>
   </head>
   <body>
     <div class="container">
-      <form action="">
+      <form id="form-country" action="">
         <label for="country">Pays</label>
         <select name="country" id="country">
+          <option value="all"></option>
           <option value="France">France</option>
           <option value="Italy">Italie</option>
           <option value="Germany">Allemagne</option>
         </select>
+        <input type="submit" value="Valider" />
+      </form>
+      <form id="form-filter" action="">
+        <label for="filter">Filtre</label>
+        <input type="text" id="filter">
         <input type="submit" value="Valider" />
       </form>
 
