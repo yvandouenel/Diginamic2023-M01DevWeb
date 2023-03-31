@@ -2,12 +2,13 @@
 $page = 'accueil.php';
 if (isset($_GET['page'])) {
     switch ($_GET['page']) {
+        case 'menus':
+            $page = "menus.php";
+            break;
         case 'plats':
             $page = "plats.php";
             break;
-        case "menus":
-            $page = "menus.php";
-            break;
+       // cas du menu à gérer ici
         default:
             break;
     }
