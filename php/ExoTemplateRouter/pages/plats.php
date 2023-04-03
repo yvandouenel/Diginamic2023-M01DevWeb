@@ -31,7 +31,14 @@
             }
         foreach ($tab as $key=>$value) {
                 foreach ($value as $plat) {
-                    echo '<tr><td>'.$key.'</td><td>'.$plat.'</td><td><a class="text-white" href="/index.php?page=admin&action=delete&key='.$key.'&value='.$plat.'">Supprimer</a></td></tr>';
+                    echo "\t".PHP_EOL.'<tr>'.
+                    "\t\t".PHP_EOL.'<td>'.$key.'</td>'.
+                    "\t\t".PHP_EOL.'<td>'.$plat.'</td>'.
+                    "\t\t".PHP_EOL.'<td>'.
+                    "\t\t\t".PHP_EOL.'<a class="text-white" href="/index.php?page=admin&action=delete&key='.$key.'&value='.$plat.'">Supprimer</a>'.
+                    "\t\t\t".PHP_EOL.'<a class="text-white" href="/index.php?page=admin&action=update&key='.$key.'&value='.$plat.'">Mettre à jour</a>'.
+                    "\t\t".PHP_EOL.'</td>'.
+                    "\t".PHP_EOL.'<tr>';
                 }
             }
         }
