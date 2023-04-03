@@ -8,9 +8,24 @@ if (isset($_GET['page'])) {
         case 'plats':
             $page = "plats.php";
             break;
-       // cas du menu à gérer ici
+        default:
+            break;
+    }
+    
+}
+if (isset($_GET['action'])){
+    switch ($_GET['action']) {
+        case 'add':
+            $page = "admin/add.php";
+            break;
+        case 'update':
+            $page = "admin/update.php";
+            break;
+        case 'delete':
+            $page = "admin/delete.php";
+            break;
         default:
             break;
     }
 }
-include_once(dirname(__FILE__).'/../../pages/'.$page);
+include_once(dirname(__FILE__) . '/../../pages/' . $page);
