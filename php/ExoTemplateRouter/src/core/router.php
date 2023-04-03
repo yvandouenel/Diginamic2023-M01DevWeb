@@ -8,24 +8,27 @@ if (isset($_GET['page'])) {
         case 'plats':
             $page = "plats.php";
             break;
+        case 'admin':
+                if (isset($_GET['action'])){
+                    switch ($_GET['action']) {
+                        case 'add':
+                            $page = "admin/add.php";
+                            break;
+                        case 'update':
+                            $page = "admin/update.php";
+                            break;
+                        case 'delete':
+                            $page = "admin/delete.php";
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                break;
         default:
             break;
     }
     
 }
-if (isset($_GET['action'])){
-    switch ($_GET['action']) {
-        case 'add':
-            $page = "admin/add.php";
-            break;
-        case 'update':
-            $page = "admin/update.php";
-            break;
-        case 'delete':
-            $page = "admin/delete.php";
-            break;
-        default:
-            break;
-    }
-}
+
 include_once(dirname(__FILE__) . '/../../pages/' . $page);

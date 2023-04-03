@@ -7,7 +7,7 @@ include_once(dirname(__FILE__) . "/../src/datas/plats.php");
   <?php
   foreach ($tab as $categorie => $plats) {
     static $i = 0;
-    echo '<li><a href="/index.php?categorie=' .  $categorie . '&action=add" class="btn btn-secondary">' . $categorie . '</a></li>';
+    echo '<li><a href="/index.php?page=admin&categorie=' .  $categorie . '&action=add" class="btn btn-secondary">' . $categorie . '</a></li>';
     $i++;
   }
   ?>

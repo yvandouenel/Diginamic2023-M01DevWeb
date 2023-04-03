@@ -3,7 +3,7 @@ include_once(dirname(__FILE__) . "/../../src/datas/plats.php");
 
 ?>
 <h2>Gestion de l'ajout ici</h2>
-<form class="form" action="/index.php?categorie=<?= $_GET["categorie"] ?>&action=add" method="POST">
+<form class="form" action="/index.php?page=admin&categorie=<?= $_GET["categorie"] ?>&action=add" method="POST">
   <?php
   foreach ($tab as $categorie => $plats) {
     if ($categorie == $_GET["categorie"]) {
