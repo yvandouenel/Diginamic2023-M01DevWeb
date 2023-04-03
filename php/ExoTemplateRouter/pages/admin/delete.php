@@ -6,14 +6,11 @@ foreach ($tab[$_GET["key"]] as $key => $plat) {
     echo "<h2>Suppression du plat \"$plat\" effectuée</h2>";
     // Suppression du plat dans le tableau
     unset($tab[$_GET["key"]][$key]);
-    // Suppression du fichier plats
     $filename = dirname(__FILE__) . "/../../src/datas/plats.csv";
-    if (file_exists($filename)) {
-      $status  = unlink($filename) ? 'The file ' . $filename . ' has been deleted' : 'Error deleting ' . $filename;
-    }
+   
     // Réécriture du fichier plats
     // Ouvrir le fichier en mode a : Le pointeur de fichier commence à la fin du fichier.
-    $file = fopen($filename, 'a');
+    $file = fopen($filename, 'w');
 
     // Ecrire dans le fichier
     foreach ($tab as $key => $table) {

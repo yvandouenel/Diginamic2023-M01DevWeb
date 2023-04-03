@@ -31,7 +31,7 @@
             }
         foreach ($tab as $key=>$value) {
                 foreach ($value as $plat) {
-                    echo '<tr><td>'.$key.'</td><td>'.$plat.'</td><td><a class="text-white" href="/index.php?page=admin&action=delete&action=delete&key='.$key.'&value='.$plat.'">Supprimer</a></td></tr>';
+                    echo '<tr><td>'.$key.'</td><td>'.$plat.'</td><td><a class="text-white" href="/index.php?page=admin&action=delete&key='.$key.'&value='.$plat.'">Supprimer</a></td></tr>';
                 }
             }
         }
