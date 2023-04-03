@@ -36,7 +36,7 @@ if (isset($_POST['dish_name_' . $_GET["categorie"]])) {
     $file = fopen($f, 'a');
 
     // Ecrire dans le fichier
-    fwrite($file, "\r\n" . $_GET["categorie"] . ';' . $_POST['dish_name_' . $_GET["categorie"]]);
+    fwrite($file, PHP_EOL . $_GET["categorie"] . ';' . $_POST['dish_name_' . $_GET["categorie"]]);
 
     // Fermer le fichier
     fclose($file);

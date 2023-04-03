@@ -16,12 +16,14 @@
                 <?php echo (isset($_GET['tri']) && $_GET['tri'] === 'asc') ?  '<i class="bi bi-arrow-down-circle"></i>' :  '<i class="bi bi-arrow-up-circle"></i>';?>
             </a>
         </th>
+        <th scope='col'>Action
+        </th>
     </thead>
     <?php
         if (isset($_GET['tri'])) {
             $aliments = tri_plats($tab, $_GET['tri']);
             foreach ($aliments as $key => $value) {
-                echo "<tr><td>$value</td><td>$key</td></tr>";
+                echo '<tr><td>'.$value.'</td><td>'.$key.'</td><td><a  class="text-white" class="text-white" href="/index.php?page=admin&action=delete&key='.$key.'&value='.$value.'">Supprimer</a></td></tr>';
             }
         } else {
             if (isset($_GET['tricat'])) {
@@ -29,7 +31,7 @@
             }
         foreach ($tab as $key=>$value) {
                 foreach ($value as $plat) {
-                    echo "<tr><td>$key</td><td>$plat</td></tr>";
+                    echo '<tr><td>'.$key.'</td><td>'.$plat.'</td><td><a class="text-white" href="/index.php?page=admin&action=delete&action=delete&key='.$key.'&value='.$plat.'">Supprimer</a></td></tr>';
                 }
             }
         }
