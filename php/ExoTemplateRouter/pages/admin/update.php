@@ -50,7 +50,7 @@ if (isset($_POST['dish_name'])) {
       fclose($file);
     }
   } 
-  include(dirname(__FILE__) . '/../../pages/plats.php');
+  include(dirname(__FILE__) . '/../../pages/admin/plats.php');
 }
 
 ?>

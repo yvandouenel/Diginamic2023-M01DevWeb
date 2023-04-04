@@ -2,23 +2,20 @@
 include_once(dirname(__FILE__) . "/../../src/datas/plats.php");
 
 ?>
-<h2>Gestion de l'ajout ici</h2>
+<h2><?= $_GET["categorie"] ?> - formulaire d'ajout</h2>
 <form class="form" action="/index.php?page=admin&categorie=<?= $_GET["categorie"] ?>&action=add" method="POST">
   <?php
   foreach ($tab as $categorie => $plats) {
     if ($categorie == $_GET["categorie"]) {
       static $i = 0;
-      echo '<fieldset>
-      <legend class="h3">' . $categorie . '</legend>';
       echo '<div class="ms-2">'
-        . '<label for="dish-name-' . $categorie . '">Nom du plat : </label>'
-        . '<input id="dish-name-' . $categorie . '" type="text" name="dish_name_' . $_GET["categorie"] . '">'
+        . '<label for="dish-name-' . $categorie . '" class="form-label">Nom : </label>'
+        . '<input class="form-control" id="dish-name-' . $categorie . '" type="text" name="dish_name_' . $_GET["categorie"] . '">'
         . '<input id="dish-category-' . $categorie . '" type="hidden" name="dish_category_' . $_GET["categorie"] . '" value="' . $_GET["categorie"] . '">'
-        . '<input  type="submit" value="Ajouter un.e ' . $categorie . '">'
+        . '<input class="btn btn-success my-3"  type="submit" value="Ajouter un.e ' . $categorie . '">'
         . '</div>';
 
 
-      echo '</fieldset>';
       $i++;
     }
   }

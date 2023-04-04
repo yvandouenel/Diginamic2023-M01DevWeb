@@ -8,8 +8,18 @@ if (isset($_GET['page'])) {
         case 'plats':
             $page = "plats.php";
             break;
+        case 'login':
+            $page = "loginForm.php";
+            break;
+        case 'logincheck':
+            $page = "login.php";
+            break;
+        case 'logout':
+            $page = "logout.php";
+            break;
         case 'admin':
-                if (isset($_GET['action'])){
+            if ($_SESSION["login"]) {
+                if (isset($_GET['action'])) {
                     switch ($_GET['action']) {
                         case 'add':
                             $page = "admin/add.php";
@@ -20,15 +30,19 @@ if (isset($_GET['page'])) {
                         case 'delete':
                             $page = "admin/delete.php";
                             break;
+                        case 'plats':
+                            $page = "admin/plats.php";
+                            break;
                         default:
                             break;
                     }
                 }
-                break;
+            } else $page = "loginForm.php";
+
+            break;
         default:
             break;
     }
-    
 }
 
 include_once(dirname(__FILE__) . '/../../pages/' . $page);
