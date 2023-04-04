@@ -41,8 +41,9 @@ include_once(dirname(__FILE__) . "/../../src/cantine/plats.php");
                     "\t\t" . PHP_EOL . '<td>' . $plat . '</td>' .
                     "\t\t" . PHP_EOL . '<td>' .
                     "\t\t\t" . PHP_EOL . '<div class="d-flex gap-4">' .
-                    "\t\t\t\t" . PHP_EOL . '<a class="text-white" href="/index.php?page=admin&action=delete&key=' . $key . '&value=' . $plat . '">Supprimer</a>' .
-                    "\t\t\t\t" . PHP_EOL . '<a class="text-white" href="/index.php?page=admin&action=update&key=' . $key . '&value=' . $plat . '">Mettre à jour</a>' .
+                    "\t\t\t\t" . PHP_EOL . '<a class="text-white" href="/index.php?page=admin&action=delete&key=' . $key . '&value=' . addslashes($plat) . '">Supprimer</a>' .
+                    "\t\t\t\t" . PHP_EOL . '<a class="text-white" href="/index.php?page=admin&action=update&key=' . $key . '&value=' . urlencode($plat) . '">Mettre à jour</a>' .
+                    "\t\t\t\t" . PHP_EOL . '<a class="text-white" href="/index.php?page=admin&action=addimage&key=' . $key . '&value=' . urlencode($plat) . '">Ajouter une image</a>' .
                     "\t\t\t" . PHP_EOL . '</div>' .
                     "\t\t" . PHP_EOL . '</td>' .
                     "\t" . PHP_EOL . '<tr>';

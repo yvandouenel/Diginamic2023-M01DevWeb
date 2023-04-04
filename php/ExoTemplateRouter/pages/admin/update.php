@@ -2,16 +2,19 @@
 include_once(dirname(__FILE__) . "/../../src/datas/plats.php");
 ?>
 <?php if (!isset($_POST['dish_name'])) { ?>
-  <form class="form" action="/index.php?page=admin&key=<?= $_GET["key"] ?>&value=<?= $_GET["value"] ?>&action=update" method="POST">
+  <form class="form" action="/index.php?page=admin&key=<?= $_GET["key"] ?>&value=<?= urldecode($_GET["value"]) ?>&action=update" method="POST">
     <?php
     foreach ($tab as $categorie => $plats) {
       if (trim($categorie) == trim($_GET["key"])) {
         echo "Modification de la categorie " . $categorie;
         foreach ($plats as $plat) {
-          if (trim($plat) == trim($_GET["value"])) {
+         
+          if (trim($plat) == urldecode(trim($_GET["value"]))) {
+            echo "<br>".urldecode(trim($_GET["value"]));
+            echo "<br>".trim($plat);
             // Modification du plat
             echo "\t" . PHP_EOL . '<label for="dish-name">Plat</label>' .
-              "\t" . PHP_EOL . '<input id="dish-name" type="text" name="dish_name" value="' . $plat . '">' .
+              "\t" . PHP_EOL . '<input id="dish-name" type="text" name="dish_name" value="' . urlencode($plat) . '">' .
               "\t" . PHP_EOL . '<input type="submit" value="Modifier">';
           }
         }

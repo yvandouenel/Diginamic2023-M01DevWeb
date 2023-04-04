@@ -33,6 +33,9 @@ if (isset($_GET['page'])) {
                         case 'plats':
                             $page = "admin/plats.php";
                             break;
+                        case 'addimage':
+                            $page = "admin/addImage.php";
+                            break;
                         default:
                             break;
                     }
