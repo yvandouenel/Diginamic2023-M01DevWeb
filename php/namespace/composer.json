@@ -1,0 +1,11 @@
+{
+    "name": "yvandouenel/namespace",
+    "description": "un test d'utilisation des namespaces",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {}
+}
