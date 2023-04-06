@@ -1,15 +1,19 @@
 <?php
-class Batiment {
+abstract class Batiment
+{
   // attribut ou propriété
-  private $adresse;
-  public function __construct($adresse)
+  private ?string $adresse;
+  public function __construct(?string $adresse = null)
   {
     $this->adresse = $adresse;
   }
-  public function getAdresse() {
+  public function getAdresse(): ?string
+  {
     return $this->adresse;
   }
-  public function affiche() {
-    echo PHP_EOL."Adresse : " . $this->getAdresse();
+  public function affiche(): void
+  {
+    if ($this->getAdresse() == null) echo "Pas d'adresse";
+    else echo PHP_EOL . "Adresse : " . $this->getAdresse();
   }
 }
