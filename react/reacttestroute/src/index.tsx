@@ -6,17 +6,24 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 import Articles from './components/Articles';
 import Home from './components/Home';
+import { loader as articlesLoader } from './loaders/articles';
+import {
+  actionAdd as addArticle
+} from "./actions/articles";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<App />} >
-      <Route path="" element={<Home />} />
-      <Route path="articles" element={<Articles />} />
-      <Route path="*" element={<Home />} />
-    </Route>
+    <>
+      <Route path="/" element={<App />} >
+        <Route path="" element={<Home />} />
+        <Route path="articles" element={<Articles />} loader={articlesLoader} />
+        <Route path="*" element={<Home />} />
+      </Route>
+      <Route path="/add/article" action={addArticle} />
+    </>
   )
 )
 root.render(

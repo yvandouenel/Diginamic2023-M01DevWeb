@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "vtt",
-      "validated": "false"
+      "validated": false
     },
     {
       "id": 2,
@@ -24,6 +24,16 @@
       "name": "sac",
       "id": 5,
       "validated": false
+    },
+    {
+      "name": "gourde",
+      "validated": false,
+      "id": 6
+    },
+    {
+      "name": "porte bagages",
+      "validated": false,
+      "id": 7
     }
   ]
 }
