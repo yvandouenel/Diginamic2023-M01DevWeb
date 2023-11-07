@@ -10,7 +10,7 @@ const Articles = () => {
         <input type="text" name="article_name" />
         <input type="submit" value="Ajouter un article" />
       </fetcher.Form>
-      {articles.map((article: any) => <Article article={article} />)}
+      {articles.map((article: any) => <Article key={article.id} article={article} />)}
     </>
   );
 }

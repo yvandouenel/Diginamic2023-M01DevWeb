@@ -1,14 +1,13 @@
 
 import './App.css';
-import {Outlet, Link} from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
+import Navbar from './components/Navbar';
 function App() {
   return (
     <div className="App">
       <header>
-       <nav>
-        <div><Link to="/">Accueil</Link></div>
-        <div><Link to="/articles">Articles</Link></div>
-       </nav>
+        <h1>learn react</h1>
+        
       </header>
       <main>
         <Outlet />
